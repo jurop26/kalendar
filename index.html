@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Kalendar</title>
+</head>
+<body>
+
+    <div id="main-container">
+        <div id="left-container"></div>
+        <div id="right-container">
+            <header>
+                <h3>Rezervačný formulár</h3>
+                <div id="actions">Vytvorenie rezervácie</div>
+            </header>
+            <hr>
+            <form method="post" id="register-form">
+                <div>
+                    <label for="name">Meno:</label>
+                    <input type="text" name="name" id="name" class="name" autocomplete="on" >
+                </div>
+                <div>
+                    <label for="datum">Dátum:</label>
+                    <input type="date" name="datum" id="datum" class="datum" autocomplete="on" >
+
+                </div>
+                <div>
+                    <label for="cas">Čas:</label>
+                    <input type="time" name="cas" id="cas" class="cas" autocomplete="on" >
+                </div>
+                <div>
+                    <label for="poznamka">Poznámka:</label>
+                    <textarea name="cas" id="poznamka"></textarea>
+                </div>
+                <div>
+                    <input type="hidden" name="id" class="id">
+                    <input type="submit" form="register-form" name="submit" id="submit" value="Potvrdenie rezervácie">
+                </div>
+            </form>
+            <form method="post" id="delete-form">
+                <div>
+                    <input type="hidden" name="name" class="name" id="delete-name">
+                    <input type="hidden" name="datum" class="datum" id="delete-datum">
+                    <input type="hidden" name="cas" class="cas" id="delete-cas">
+                    <input type="hidden" name="id" class="id" id="delete-id">
+                    <input type="submit" form="delete-form" name="delete" id="delete-button" value="Zmazať rezerváciu">
+                    <button name="cancel" id="cancel">Zrušiť</button>
+                </div>
+            </form>
+                <div>
+                    <div id="message"></div>
+                </div>
+            <footer>&copy 2023 JupacSoftware</footer>
+        </div>
+    </div>
+    
+</body>
+</html>
